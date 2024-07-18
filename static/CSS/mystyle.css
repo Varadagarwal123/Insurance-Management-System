@@ -1,0 +1,16 @@
+.nav-link{
+    color: white !important;
+}
+
+.nav-link:hover{
+    background-color: rgb(117, 157, 160);
+    border-radius: 15px;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+#collapsibleNavbar{
+    padding-left: 700px;
+}

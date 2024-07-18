@@ -1,0 +1,62 @@
+/* accepted_policies.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+#accepted-policies-container {
+    margin-top: 50px;
+    max-width: 800px;
+}
+
+#accepted-policies-container h1 {
+    color: #17a2b8;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#accepted-policies-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#accepted-policies-container li {
+    background-color: #e3f7f9;
+    padding: 20px;
+    border: 1px solid #17a2b8;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-out;
+}
+
+#accepted-policies-container li h2 {
+    color: #17a2b8;
+}
+
+#accepted-policies-container li p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

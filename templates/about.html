@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Insurance Management System</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: url("https://media.istockphoto.com/id/1138620006/photo/insurance-policy-document.jpg?s=612x612&w=0&k=20&c=I6GJfGQ52WqDyBN5IrbexRU4lEd_YA1Khh0r6oFSu9w=") no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content {
+            padding: 50px 15px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #17a2b8;
+            font-weight: bold;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in-out;
+            line-height: 1.6;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+        }
+
+        .team-member h3 {
+            color: #17a2b8;
+            margin: 15px 0 5px;
+        }
+
+        .team-member p {
+            color: #555;
+            margin: 0 15px 15px;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    {% include 'header.html' %}
+
+    <div class="hero">
+        <div>
+            <h1>About Us</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Our Mission</h2>
+        <p>At Insurance Management System, our mission is to provide reliable, comprehensive, and affordable insurance solutions tailored to meet the unique needs of our clients. We strive to offer exceptional customer service and support, ensuring that our clients have peace of mind knowing they are well-protected.</p>
+
+        <h2>Our Vision</h2>
+        <p>We envision a world where everyone has access to quality insurance coverage that safeguards their health, property, and financial well-being. Our goal is to be a leading insurance provider, known for our commitment to integrity, innovation, and excellence.</p>
+
+        <h2>Meet Our Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/250" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/250" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>COO</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/250" alt="Team Member 3">
+                <h3>Mike Johnson</h3>
+                <p>CFO</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/250" alt="Team Member 4">
+                <h3>Emily Davis</h3>
+                <p>CTO</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

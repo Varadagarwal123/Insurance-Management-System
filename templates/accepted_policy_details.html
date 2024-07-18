@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+{% include "inner_header.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'CSS/accepted_policies.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accepted Policies</title>
+</head>
+<body>
+    <div id="accepted-policies-container" class="container">
+        <h1>Accepted Policies for {{ request.user.username }}</h1>
+
+        {% if accepted_policies %}
+            <ul>
+                {% for application in accepted_policies %}
+                    <li>
+                        <h2>{{ application.policy.name }}</h2>
+                        <p><strong>Policy Number:</strong> {{ application.policy.policy_number }}</p>
+                        <p><strong>Description:</strong> {{ application.policy.description }}</p>
+                        <p><strong>Coverage Amount:</strong> {{ application.policy.coverage_amount }}</p>
+                        <p><strong>Premium:</strong> {{ application.policy.premium }}</p>
+                        <p><strong>Term:</strong> {{ application.policy.term }} years</p>
+                        <p><strong>Application Date:</strong> {{ application.application_date }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No accepted policies found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

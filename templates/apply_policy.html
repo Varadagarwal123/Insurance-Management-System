@@ -1,0 +1,113 @@
+{% include 'inner_header.html' %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Apply for a Policy</h1>
+            <form method="post" id="applyPolicyForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" class="form-control" id="location" name="location" placeholder="Location" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <center>
+                <button type="submit" class="btn btn-primary">Apply</button></center>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    h1 {
+        color: #17a2b8;
+        font-weight: bold;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    form {
+        background-color: #e3f7f9;
+        padding: 20px;
+        border: 1px solid #17a2b8;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: slideIn 1.5s ease-out;
+    }
+
+    .form-control {
+        border: 1px solid #17a2b8;
+        margin-bottom: 10px;
+        transition: border-color 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: #138496;
+        box-shadow: 0 0 8px rgba(19, 132, 150, 0.5);
+    }
+
+    .btn-primary {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #138496;
+        border-color: #138496;
+        transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
